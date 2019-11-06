@@ -140,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 38
+        y: 59
         width: 10
         height: 17
       alignment: 7
@@ -160,7 +160,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 38
+        y: 59
         width: 10
         height: 17
       alignment: 7
@@ -180,7 +180,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 38
+        y: 59
         width: 10
         height: 17
       alignment: 7
@@ -202,7 +202,7 @@ TextureImporter:
         x: 51
         y: 59
         width: 10
-        height: 4
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,7 +222,7 @@ TextureImporter:
         x: 67
         y: 59
         width: 10
-        height: 5
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,7 +242,7 @@ TextureImporter:
         x: 83
         y: 59
         width: 10
-        height: 6
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,7 +262,7 @@ TextureImporter:
         x: 99
         y: 59
         width: 10
-        height: 7
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,7 +282,7 @@ TextureImporter:
         x: 115
         y: 59
         width: 10
-        height: 8
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,7 +302,7 @@ TextureImporter:
         x: 131
         y: 59
         width: 10
-        height: 9
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,7 +322,7 @@ TextureImporter:
         x: 147
         y: 59
         width: 10
-        height: 10
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,7 +342,7 @@ TextureImporter:
         x: 163
         y: 59
         width: 10
-        height: 11
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,7 +362,7 @@ TextureImporter:
         x: 179
         y: 59
         width: 10
-        height: 12
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,7 +382,7 @@ TextureImporter:
         x: 195
         y: 59
         width: 10
-        height: 13
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,7 +402,7 @@ TextureImporter:
         x: 211
         y: 59
         width: 10
-        height: 15
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,7 +422,7 @@ TextureImporter:
         x: 227
         y: 59
         width: 10
-        height: 16
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,7 +459,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_16
       rect:
         serializedVersion: 2
-        x: 51
+        x: 3
         y: 38
         width: 10
         height: 17
@@ -479,7 +479,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_17
       rect:
         serializedVersion: 2
-        x: 67
+        x: 19
         y: 38
         width: 10
         height: 17
@@ -499,7 +499,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_18
       rect:
         serializedVersion: 2
-        x: 83
+        x: 35
         y: 38
         width: 10
         height: 17
@@ -519,7 +519,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_19
       rect:
         serializedVersion: 2
-        x: 99
+        x: 51
         y: 38
         width: 10
         height: 17
@@ -539,7 +539,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_20
       rect:
         serializedVersion: 2
-        x: 115
+        x: 67
         y: 38
         width: 10
         height: 17
@@ -559,7 +559,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_21
       rect:
         serializedVersion: 2
-        x: 131
+        x: 83
         y: 38
         width: 10
         height: 17
@@ -579,7 +579,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_22
       rect:
         serializedVersion: 2
-        x: 147
+        x: 99
         y: 38
         width: 10
         height: 17
@@ -599,7 +599,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_23
       rect:
         serializedVersion: 2
-        x: 163
+        x: 115
         y: 38
         width: 10
         height: 17
@@ -619,7 +619,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_24
       rect:
         serializedVersion: 2
-        x: 179
+        x: 131
         y: 38
         width: 10
         height: 17
@@ -639,7 +639,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_25
       rect:
         serializedVersion: 2
-        x: 195
+        x: 147
         y: 38
         width: 10
         height: 17
@@ -659,7 +659,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_26
       rect:
         serializedVersion: 2
-        x: 211
+        x: 163
         y: 38
         width: 10
         height: 17
@@ -679,10 +679,10 @@ TextureImporter:
       name: Turret_ForTutorial_2_27
       rect:
         serializedVersion: 2
-        x: 228
-        y: 47
-        width: 5
-        height: 4
+        x: 179
+        y: 38
+        width: 10
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,8 +699,8 @@ TextureImporter:
       name: Turret_ForTutorial_2_28
       rect:
         serializedVersion: 2
-        x: 3
-        y: 17
+        x: 195
+        y: 38
         width: 10
         height: 17
       alignment: 7
@@ -719,8 +719,8 @@ TextureImporter:
       name: Turret_ForTutorial_2_29
       rect:
         serializedVersion: 2
-        x: 19
-        y: 17
+        x: 211
+        y: 38
         width: 10
         height: 17
       alignment: 7
@@ -739,12 +739,12 @@ TextureImporter:
       name: Turret_ForTutorial_2_30
       rect:
         serializedVersion: 2
-        x: 35
-        y: 17
-        width: 10
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 229
+        y: 47
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -759,7 +759,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_31
       rect:
         serializedVersion: 2
-        x: 51
+        x: 3
         y: 17
         width: 10
         height: 17
@@ -779,7 +779,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_32
       rect:
         serializedVersion: 2
-        x: 67
+        x: 19
         y: 17
         width: 10
         height: 17
@@ -799,7 +799,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_33
       rect:
         serializedVersion: 2
-        x: 83
+        x: 35
         y: 17
         width: 10
         height: 17
@@ -819,7 +819,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_34
       rect:
         serializedVersion: 2
-        x: 99
+        x: 51
         y: 17
         width: 10
         height: 17
@@ -839,7 +839,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_35
       rect:
         serializedVersion: 2
-        x: 115
+        x: 67
         y: 17
         width: 10
         height: 17
@@ -859,7 +859,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_36
       rect:
         serializedVersion: 2
-        x: 131
+        x: 83
         y: 17
         width: 10
         height: 17
@@ -879,7 +879,7 @@ TextureImporter:
       name: Turret_ForTutorial_2_37
       rect:
         serializedVersion: 2
-        x: 147
+        x: 99
         y: 17
         width: 10
         height: 17
@@ -899,10 +899,10 @@ TextureImporter:
       name: Turret_ForTutorial_2_38
       rect:
         serializedVersion: 2
-        x: 3
-        y: 59
+        x: 115
+        y: 17
         width: 10
-        height: 1
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -910,7 +910,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44009d2c6561da4498b7fb2893edf954
+      spriteID: e47e40b2633ede740945a513921a4e24
       vertices: []
       indices: 
       edges: []
@@ -919,10 +919,10 @@ TextureImporter:
       name: Turret_ForTutorial_2_39
       rect:
         serializedVersion: 2
-        x: 19
-        y: 59
+        x: 131
+        y: 17
         width: 10
-        height: 2
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -930,7 +930,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01175cf119c2ce64fb795d0f20ca750e
+      spriteID: 86228ae24b3cb30449619ac386eb8d1a
       vertices: []
       indices: 
       edges: []
@@ -939,10 +939,10 @@ TextureImporter:
       name: Turret_ForTutorial_2_40
       rect:
         serializedVersion: 2
-        x: 35
-        y: 59
+        x: 147
+        y: 17
         width: 10
-        height: 3
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -950,7 +950,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6eb024ba75b4949b3a23da6a23fdb6
+      spriteID: 5a3a923e4e02c6d4a9a368cf1def6456
       vertices: []
       indices: 
       edges: []
