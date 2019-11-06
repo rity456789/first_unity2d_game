@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public int curHP;
     public int maxHP = 5;
 
+    public KeyCode jumpKey = KeyCode.Space;
+
     void Start()
     {
         r2 = gameObject.GetComponent<Rigidbody2D>();
@@ -27,7 +29,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
         // jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(jumpKey))
         {
             if (isGrounded)
             {
