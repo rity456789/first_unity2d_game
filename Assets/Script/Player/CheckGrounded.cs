@@ -16,18 +16,18 @@ public class CheckGrounded : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(!collision.isTrigger) player.isGrounded = true;
+        if(!col.isTrigger) player.isGrounded = true;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        if(!collision.isTrigger) player.isGrounded = true;
+        if(!col.isTrigger) player.isGrounded = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if(!collision.isTrigger) player.isGrounded = false;
+        if(!col.isTrigger) player.isGrounded = false;
     }
 }

@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\EndWorld.cs" />
      <Compile Include="Assets\Script\FallingPlat.cs" />
      <Compile Include="Assets\Script\FollowedCamera.cs" />
      <Compile Include="Assets\Script\Menu\DeadMenu.cs" />
