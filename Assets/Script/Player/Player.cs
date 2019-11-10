@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D r2;
     public Animator anim;
+    public GameMaster gameMaster;
 
     public int curHP;
     public int maxHP = 5;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     {
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+        gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         curHP = maxHP;
     }
 
@@ -123,5 +125,14 @@ public class Player : MonoBehaviour
     {
         r2.velocity = new Vector2(0, 0);
         r2.AddForce(new Vector2(-1000, 400));
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Coin"))
+        {
+            Destroy(col.gameObject);
+            gameMaster.score += 1;
+        }
     }
 }
