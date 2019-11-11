@@ -25,6 +25,7 @@ public class DeadMenu : MonoBehaviour
         }
         if (isDeaded)
         {
+            
             deadMenu.SetActive(true);
             Time.timeScale = 0.0f;
         }

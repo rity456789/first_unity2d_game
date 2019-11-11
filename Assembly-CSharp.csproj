@@ -57,6 +57,7 @@
      <Compile Include="Assets\Script\FollowedCamera.cs" />
      <Compile Include="Assets\Script\GameMaster.cs" />
      <Compile Include="Assets\Script\GameObjects\Coin.cs" />
+     <Compile Include="Assets\Script\GameObjects\Door.cs" />
      <Compile Include="Assets\Script\GameObjects\FallingPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\MovingPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\Spike.cs" />
