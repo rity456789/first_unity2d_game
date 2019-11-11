@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
 
     public KeyCode attackKey = KeyCode.Z;
 
+    public SoundManager soundManager;
+
     private void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -21,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
     }
     
 
@@ -30,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(attackKey) && !isAttacking)
         {
+            soundManager.PlaySwordSound();
             isAttacking = true;
             trigger.enabled = true;
             attackDelay = 0.3f;

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D r2;
     public Animator anim;
     public GameMaster gameMaster;
+    public SoundManager soundManager;
 
     public int curHP;
     public int maxHP = 5;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         curHP = maxHP;
     }
 
@@ -131,6 +133,7 @@ public class Player : MonoBehaviour
     {
         if (col.CompareTag("Coin"))
         {
+            soundManager.PlayCoinSound();
             Destroy(col.gameObject);
             gameMaster.score += 1;
         }

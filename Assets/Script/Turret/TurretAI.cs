@@ -20,6 +20,7 @@ public class TurretAI : MonoBehaviour
     public Transform target;
     public Animator anim;
     public Transform shootPointLeft, shootPointRight;
+    public SoundManager soundManager;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class TurretAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class TurretAI : MonoBehaviour
  
         if (curHealth < 0)
         {
+            soundManager.PlayCrashSound();
             Destroy(gameObject);
         }
     }

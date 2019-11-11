@@ -68,6 +68,7 @@
      <Compile Include="Assets\Script\Player\HPBar.cs" />
      <Compile Include="Assets\Script\Player\Player.cs" />
      <Compile Include="Assets\Script\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Script\SoundManager.cs" />
      <Compile Include="Assets\Script\Turret\AttackRange.cs" />
      <Compile Include="Assets\Script\Turret\Bullet.cs" />
      <Compile Include="Assets\Script\Turret\TurretAI.cs" />
