@@ -60,7 +60,7 @@
      <Compile Include="Assets\Script\GameObjects\Door.cs" />
      <Compile Include="Assets\Script\GameObjects\FallingPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\MoveUpPlat.cs" />
-     <Compile Include="Assets\Script\GameObjects\MoveUpPlat1.cs" />
+     <Compile Include="Assets\Script\GameObjects\MovingFRPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\Spike.cs" />
      <Compile Include="Assets\Script\Menu\DeadMenu.cs" />
      <Compile Include="Assets\Script\Menu\PauseMenu.cs" />
