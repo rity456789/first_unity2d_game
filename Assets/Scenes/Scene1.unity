@@ -2364,6 +2364,7 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   swordSound: {fileID: 0}
   crashSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!82 &824817241
 AudioSource:
@@ -3580,7 +3581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c71384fa2f86894caa50afa8f3ef035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!64 &1255192050
 MeshCollider:
   m_ObjectHideFlags: 0

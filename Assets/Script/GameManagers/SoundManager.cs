@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip coinSound, swordSound, crashSound;
+    public AudioClip coinSound, swordSound, crashSound, jumpSound;
  
     public AudioSource audioSource;
     // Start is called before the first frame update
@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
         coinSound = Resources.Load<AudioClip>("Coin");
         swordSound = Resources.Load<AudioClip>("Sword");
         crashSound = Resources.Load<AudioClip>("Crash");
+        jumpSound = Resources.Load<AudioClip>("Jump");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -38,5 +39,11 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.clip = crashSound;
         audioSource.PlayOneShot(crashSound, 1f);
+    }
+
+    public void PlayJumpSound()
+    {
+        audioSource.clip = jumpSound;
+        audioSource.PlayOneShot(jumpSound, 1f);
     }
 }

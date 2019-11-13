@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
-    public Player player;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class BackGround : MonoBehaviour
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         Material material = meshRenderer.material;
         Vector2 offset = material.mainTextureOffset;
-        offset.x = player.transform.position.x / 2;
+        offset.x = camera.transform.position.x / 2;
         material.mainTextureOffset = offset * Time.fixedDeltaTime;
     }
 }

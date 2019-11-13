@@ -35,8 +35,10 @@ public class Player : MonoBehaviour
         // jump
         if (Input.GetKeyDown(jumpKey))
         {
+
             if (isGrounded)
             {
+                soundManager.PlayJumpSound();
                 isGrounded = false;
                 doubleJump = true;
                 r2.AddForce(Vector2.up * jumpPow);
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
             {
                 if (doubleJump)
                 {
+                    soundManager.PlayJumpSound();
                     doubleJump = false;
                     r2.velocity = new Vector2(r2.velocity.x, 0);
                     r2.AddForce(Vector2.up * 0.8f * jumpPow);
