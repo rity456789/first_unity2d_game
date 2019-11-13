@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 50f, maxSpeed = 3, maxJump = 4, jumpPow = 250f;
-    public bool isGrounded = true, faceright = true, doubleJump = true;
+    public bool isGrounded = true, faceright = true, doubleJump = true, isSwimming = false;
 
     public Rigidbody2D r2;
     public Animator anim;
@@ -135,26 +135,29 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Coin"))
-        {
-            soundManager.PlayCoinSound();
-            Destroy(col.gameObject);
-            gameMaster.score += 1;
-        }
-        else if (col.CompareTag("Heart"))
-        {
-            soundManager.PlayHeartSound();
-            gameObject.GetComponent<Animation>().Play("heal");
-            Destroy(col.gameObject);
-            if (curHP < 5) curHP += 1;
-        }
-        if (col.CompareTag("Shoe"))
-        {
-            soundManager.PlayShoeSound();
-            Destroy(col.gameObject);
-            maxSpeed = 4.5f;
-            speed = 75f;
-            StartCoroutine(normalizeSpeed(5));
+        if (!col.CompareTag("Player"))
+        {   // Avoid checkground trigger enter
+            if (col.CompareTag("Coin"))
+            {
+                soundManager.PlayCoinSound();
+                Destroy(col.gameObject);
+                gameMaster.score += 1;
+            }
+            else if (col.CompareTag("Heart"))
+            {
+                soundManager.PlayHeartSound();
+                gameObject.GetComponent<Animation>().Play("heal");
+                Destroy(col.gameObject);
+                if (curHP < 5) curHP += 1;
+            }
+            if (col.CompareTag("Shoe"))
+            {
+                soundManager.PlayShoeSound();
+                Destroy(col.gameObject);
+                maxSpeed = 4.5f;
+                speed = 75f;
+                StartCoroutine(normalizeSpeed(5));
+            }
         }
     }
     IEnumerator normalizeSpeed (float time)
