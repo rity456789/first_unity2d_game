@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     {
         // run
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isSwimming", isSwimming);
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
         // jump
@@ -53,6 +54,12 @@ public class Player : MonoBehaviour
                     r2.AddForce(Vector2.up * 0.8f * jumpPow);
                 }
             }
+
+            if (isSwimming)
+            {
+                soundManager.PlayJumpSound();
+                r2.AddForce(Vector2.up * jumpPow);
+            }            
         }
 
         
@@ -86,7 +93,7 @@ public class Player : MonoBehaviour
         }
 
         //tao ma sat
-        if (isGrounded)
+        if (isGrounded || isSwimming)
         {
             r2.velocity = r2.velocity = new Vector2(r2.velocity.x * 0.8f, r2.velocity.y);
         }
