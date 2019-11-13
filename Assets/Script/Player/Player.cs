@@ -142,36 +142,33 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.CompareTag("Player") && !col.CompareTag("AttackTrigger"))
-        {   // Avoid checkground trigger enter
-            if (col.CompareTag("Coin"))
-            {
-                soundManager.PlayCoinSound();
-                Destroy(col.gameObject);
-                gameMaster.score += 1;
-            }
-            else if (col.CompareTag("Heart"))
-            {
-                soundManager.PlayHeartSound();
-                gameObject.GetComponent<Animation>().Play("heal");
-                Destroy(col.gameObject);
-                if (curHP < 5) curHP += 1;
-            }
-            else if (col.CompareTag("Shoe"))
-            {
-                soundManager.PlayShoeSound();
-                Destroy(col.gameObject);
-                maxSpeed = 4.5f;
-                speed = 75f;
-                StartCoroutine(normalizeSpeed(5));
-            }
-            else if (col.CompareTag("FullHeart"))
-            {
-                soundManager.PlayFullHeartSound();
-                gameObject.GetComponent<Animation>().Play("heal");
-                Destroy(col.gameObject);
-                curHP = 5;
-            }
+        if (col.CompareTag("Coin"))
+        {
+            soundManager.PlayCoinSound();
+            Destroy(col.gameObject);
+            gameMaster.score += 1;
+        }
+        else if (col.CompareTag("Heart"))
+        {
+            soundManager.PlayHeartSound();
+            gameObject.GetComponent<Animation>().Play("heal");
+            Destroy(col.gameObject);
+            if (curHP < 5) curHP += 1;
+        }
+        else if (col.CompareTag("Shoe"))
+        {
+            soundManager.PlayShoeSound();
+            Destroy(col.gameObject);
+            maxSpeed = 4.5f;
+            speed = 75f;
+            StartCoroutine(normalizeSpeed(5));
+        }
+        else if (col.CompareTag("FullHeart"))
+        {
+            soundManager.PlayFullHeartSound();
+            gameObject.GetComponent<Animation>().Play("heal");
+            Destroy(col.gameObject);
+            curHP = 5;
         }
     }
     IEnumerator normalizeSpeed (float time)

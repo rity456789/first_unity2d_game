@@ -18,7 +18,7 @@ public class CheckGrounded : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if(!col.isTrigger) player.isGrounded = true;
         else if (col.CompareTag("Water")){

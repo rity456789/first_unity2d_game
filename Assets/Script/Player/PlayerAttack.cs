@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public KeyCode attackKey = KeyCode.Z;
 
     public SoundManager soundManager;
+    public Player player;
 
     private void Awake()
     {
@@ -24,13 +25,14 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        player = gameObject.GetComponent<Player>();
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(attackKey) && !isAttacking)
+        if (Input.GetKeyDown(attackKey) && !isAttacking && !player.isSwimming)
         {
             soundManager.PlaySwordSound();
             isAttacking = true;
