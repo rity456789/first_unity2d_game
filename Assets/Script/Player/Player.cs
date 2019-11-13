@@ -116,6 +116,7 @@ public class Player : MonoBehaviour
     public void DecreaseHP (int hp)
     {
         curHP -= hp;
+        soundManager.PlayHurtSound();
         gameObject.GetComponent<Animation>().Play("damaged");
         //check curHP
         if (curHP > maxHP)
