@@ -23,11 +23,11 @@ public class CheckGrounded : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if(!col.isTrigger) player.isGrounded = true;
+        if(!col.isTrigger || col.CompareTag("Water")) player.isGrounded = true;
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if(!col.isTrigger) player.isGrounded = false;
+        if(!col.isTrigger || col.CompareTag("Water")) player.isGrounded = false;
     }
 }
