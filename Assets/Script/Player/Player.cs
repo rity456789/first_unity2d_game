@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
 
     public KeyCode jumpKey = KeyCode.Space;
 
+    private bool isFeezedTrigger = false;   // to deny trigger enter 2 colliders
+
     void Start()
     {
         r2 = gameObject.GetComponent<Rigidbody2D>();
@@ -142,33 +144,38 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Coin"))
+        if (!isFeezedTrigger)
         {
-            soundManager.PlayCoinSound();
-            Destroy(col.gameObject);
-            gameMaster.score += 1;
-        }
-        else if (col.CompareTag("Heart"))
-        {
-            soundManager.PlayHeartSound();
-            gameObject.GetComponent<Animation>().Play("heal");
-            Destroy(col.gameObject);
-            if (curHP < 5) curHP += 1;
-        }
-        else if (col.CompareTag("Shoe"))
-        {
-            soundManager.PlayShoeSound();
-            Destroy(col.gameObject);
-            maxSpeed = 4.5f;
-            speed = 75f;
-            StartCoroutine(normalizeSpeed(5));
-        }
-        else if (col.CompareTag("FullHeart"))
-        {
-            soundManager.PlayFullHeartSound();
-            gameObject.GetComponent<Animation>().Play("heal");
-            Destroy(col.gameObject);
-            curHP = 5;
+            isFeezedTrigger = true;
+            if (col.CompareTag("Coin"))
+            {
+                soundManager.PlayCoinSound();
+                Destroy(col.gameObject);
+                gameMaster.score += 1;
+            }
+            else if (col.CompareTag("Heart"))
+            {
+                soundManager.PlayHeartSound();
+                gameObject.GetComponent<Animation>().Play("heal");
+                Destroy(col.gameObject);
+                if (curHP < 5) curHP += 1;
+            }
+            else if (col.CompareTag("Shoe"))
+            {
+                soundManager.PlayShoeSound();
+                Destroy(col.gameObject);
+                maxSpeed = 4.5f;
+                speed = 75f;
+                StartCoroutine(normalizeSpeed(5));
+            }
+            else if (col.CompareTag("FullHeart"))
+            {
+                soundManager.PlayFullHeartSound();
+                gameObject.GetComponent<Animation>().Play("heal");
+                Destroy(col.gameObject);
+                curHP = 5;
+            }
+            StartCoroutine(unFeezeTrigger(Time.deltaTime));
         }
     }
     IEnumerator normalizeSpeed (float time)
@@ -177,6 +184,13 @@ public class Player : MonoBehaviour
         maxSpeed = 3f;
         speed = 50f;
         soundManager.PlayShoeOutSound();
+        yield return 0;
+    }
+
+    IEnumerator unFeezeTrigger (float time)
+    {
+        yield return new WaitForSeconds(time);
+        isFeezedTrigger = false;
         yield return 0;
     }
 }
