@@ -53,9 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\EndWorld.cs" />
-     <Compile Include="Assets\Script\FollowedCamera.cs" />
-     <Compile Include="Assets\Script\GameMaster.cs" />
+     <Compile Include="Assets\Script\GameManagers\BackGround.cs" />
+     <Compile Include="Assets\Script\GameManagers\EndWorld.cs" />
+     <Compile Include="Assets\Script\GameManagers\FollowedCamera.cs" />
+     <Compile Include="Assets\Script\GameManagers\GameMaster.cs" />
+     <Compile Include="Assets\Script\GameManagers\SoundManager.cs" />
      <Compile Include="Assets\Script\GameObjects\Coin.cs" />
      <Compile Include="Assets\Script\GameObjects\Door.cs" />
      <Compile Include="Assets\Script\GameObjects\FallingPlat.cs" />
@@ -69,7 +71,6 @@
      <Compile Include="Assets\Script\Player\HPBar.cs" />
      <Compile Include="Assets\Script\Player\Player.cs" />
      <Compile Include="Assets\Script\Player\PlayerAttack.cs" />
-     <Compile Include="Assets\Script\SoundManager.cs" />
      <Compile Include="Assets\Script\Turret\AttackRange.cs" />
      <Compile Include="Assets\Script\Turret\Bullet.cs" />
      <Compile Include="Assets\Script\Turret\TurretAI.cs" />
