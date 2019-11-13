@@ -17,6 +17,7 @@ public class TurretAI : MonoBehaviour
     public bool lookRight = false;
  
     public GameObject bullet;
+    public GameObject fullHeart;
     public Transform target;
     public Animator anim;
     public Transform shootPointLeft, shootPointRight;
@@ -53,7 +54,8 @@ public class TurretAI : MonoBehaviour
         if (curHealth < 0)
         {
             soundManager.PlayCrashSound();
-            Destroy(gameObject);
+            createFullHeartItem();
+            Destroy(gameObject);            
         }
     }
 
@@ -100,5 +102,11 @@ public class TurretAI : MonoBehaviour
     {
         curHealth -= dmg;
         gameObject.GetComponent<Animation>().Play("damaged");
+    }
+
+    public void createFullHeartItem(){
+        GameObject fullHeartIcon;
+        fullHeartIcon = Instantiate(fullHeart, this.transform.position, this.transform.rotation) as GameObject;
+        //fullHeartIcon.GetComponent<Rigidbody2D>().velocity = direction * bulletspeed;
     }
 }

@@ -28,7 +28,10 @@ public class CheckGrounded : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        //if(!col.isTrigger || col.CompareTag("Water")) player.isGrounded = true;
+        if(!col.isTrigger) player.isGrounded = true;
+        else if (col.CompareTag("Water")){
+            player.isSwimming = true;
+        }
         if(!col.isTrigger && col.CompareTag("MovingFRPlat"))
         {
             Vector3 pos = player.transform.position;
