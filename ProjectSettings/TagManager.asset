@@ -12,6 +12,7 @@ TagManager:
   - Water
   - Heart
   - Shoe
+  - MovingFRPlat
   layers:
   - Default
   - TransparentFX
