@@ -2365,6 +2365,10 @@ MonoBehaviour:
   swordSound: {fileID: 0}
   crashSound: {fileID: 0}
   jumpSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  heartSound: {fileID: 0}
+  fullHeartSound: {fileID: 0}
+  shoeSound: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!82 &824817241
 AudioSource:

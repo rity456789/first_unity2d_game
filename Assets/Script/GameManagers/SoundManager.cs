@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip coinSound, swordSound, crashSound, jumpSound;
+    public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound;
  
     public AudioSource audioSource;
     // Start is called before the first frame update
@@ -14,6 +14,10 @@ public class SoundManager : MonoBehaviour
         swordSound = Resources.Load<AudioClip>("Sword");
         crashSound = Resources.Load<AudioClip>("Crash");
         jumpSound = Resources.Load<AudioClip>("Jump");
+        hurtSound = Resources.Load<AudioClip>("Hurt");
+        heartSound = Resources.Load<AudioClip>("Heart");
+        fullHeartSound = Resources.Load<AudioClip>("FullHeart");
+        shoeSound = Resources.Load<AudioClip>("Shoe");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -23,27 +27,52 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    // basic function
+    public void PlaySound(AudioClip sound, float volumn)
+    {
+        audioSource.clip = sound;
+        audioSource.PlayOneShot(sound, volumn);
+    }
+
+    // -------------------------------------------------------------------------------
     public void PlayCoinSound()
     {
-        audioSource.clip = coinSound;
-        audioSource.PlayOneShot(coinSound, 1f);
+        PlaySound(coinSound, 1f);
     }
 
     public void PlaySwordSound()
     {
-        audioSource.clip = swordSound;
-        audioSource.PlayOneShot(swordSound, 0.7f);
+        PlaySound(swordSound, 0.7f);
     }
 
     public void PlayCrashSound()
     {
-        audioSource.clip = crashSound;
-        audioSource.PlayOneShot(crashSound, 1f);
+        PlaySound(crashSound, 0.7f);
     }
 
     public void PlayJumpSound()
     {
-        audioSource.clip = jumpSound;
-        audioSource.PlayOneShot(jumpSound, 1f);
+        PlaySound(jumpSound, 0.7f);
+    }
+
+    // ---------------------------------------------------------------------------------
+    public void PlayHurtSound()
+    {
+        PlaySound(hurtSound, 1f);
+    }
+
+    public void PlayHeartSound()
+    {
+        PlaySound(heartSound, 0.7f);
+    }
+
+    public void PlayFullHeartSound()
+    {
+        PlaySound(fullHeartSound, 0.7f);
+    }
+
+    public void PlayShoeSound()
+    {
+        PlaySound(shoeSound, 0.7f);
     }
 }
