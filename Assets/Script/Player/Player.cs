@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     public KeyCode jumpKey = KeyCode.Space;
 
-    private bool isFeezedTrigger = false;   // to deny trigger enter 2 colliders
+    //private bool isFeezedTrigger = false;   // to deny trigger enter 2 colliders
 
     void Start()
     {
@@ -144,9 +144,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!isFeezedTrigger)
+        //if (!isFeezedTrigger)
         {
-            isFeezedTrigger = true;
+            //isFeezedTrigger = true;
             if (col.CompareTag("Coin"))
             {
                 soundManager.PlayCoinSound();
@@ -175,7 +175,7 @@ public class Player : MonoBehaviour
                 Destroy(col.gameObject);
                 curHP = 5;
             }
-            StartCoroutine(unFeezeTrigger(Time.deltaTime));
+            //StartCoroutine(unFeezeTrigger(Time.deltaTime));
         }
     }
     IEnumerator normalizeSpeed (float time)
@@ -187,10 +187,10 @@ public class Player : MonoBehaviour
         yield return 0;
     }
 
-    IEnumerator unFeezeTrigger (float time)
-    {
-        yield return new WaitForSeconds(time);
-        isFeezedTrigger = false;
-        yield return 0;
-    }
+    // IEnumerator unFeezeTrigger (float time)
+    // {
+    //     yield return new WaitForSeconds(time);
+    //     isFeezedTrigger = false;
+    //     yield return 0;
+    // }
 }

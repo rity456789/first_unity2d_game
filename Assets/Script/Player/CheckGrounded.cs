@@ -6,6 +6,7 @@ public class CheckGrounded : MonoBehaviour
 {
     public MovingFRPlat plat;
     public Player player;
+    public float inWaterCd = 6;
 
     void Start()
     {
@@ -13,9 +14,24 @@ public class CheckGrounded : MonoBehaviour
         plat = GameObject.FindGameObjectWithTag("MovingFRPlat").GetComponent<MovingFRPlat>();
     }
 
+    void Update()
+    {
+        if (player.isSwimming)
+        {
+            if(inWaterCd > 0)
+            {
+                inWaterCd -= Time.deltaTime;
+            }
+            else{
+                player.DecreaseHP(1);
+                inWaterCd = 6;
+            }
+        }
+    }
+
     void FixedUpdate()
     {
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -45,6 +61,7 @@ public class CheckGrounded : MonoBehaviour
         if(!col.isTrigger) player.isGrounded = false;
         else if (col.CompareTag("Water")){
             player.isSwimming = false;
+            inWaterCd = 6;
         }
     }
 }
