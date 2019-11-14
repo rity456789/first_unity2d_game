@@ -64,6 +64,7 @@
      <Compile Include="Assets\Script\GameObjects\MoveUpPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\MovingFRPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\Spike.cs" />
+     <Compile Include="Assets\Script\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Script\Menu\DeadMenu.cs" />
      <Compile Include="Assets\Script\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Script\Player\AttackTrigger.cs" />

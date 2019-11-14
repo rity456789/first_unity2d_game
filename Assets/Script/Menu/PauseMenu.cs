@@ -8,9 +8,11 @@ public class PauseMenu : MonoBehaviour
 
     public bool isPaused = false;
     public GameObject pauseMenu;
+    public int levelRestart = 1;
+    public int levelMainMenu = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void Start()    
     {
         
     }
@@ -36,18 +38,18 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void resume()
+    public void Resume()
     {
         isPaused = false;
     }
  
-    public void restart()
+    public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(levelRestart);
     }
  
-    public void quit()
+    public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(levelMainMenu);
     }
 }

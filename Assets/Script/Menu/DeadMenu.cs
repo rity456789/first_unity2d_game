@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class DeadMenu : MonoBehaviour
 {
     public bool isDeaded = false;
+    public int levelRestart = 1;
+    public int levelMainMenu = 0;
 
     public Player player;
     public GameObject deadMenu;
@@ -32,8 +34,13 @@ public class DeadMenu : MonoBehaviour
         
     }
 
-    public void restart()
+    public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(levelRestart);
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(levelMainMenu);
     }
 }
