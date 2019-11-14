@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound, shoeOutSound, knockDoorSound;
+    public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound, shoeOutSound, knockDoorSound, victorySound;
  
     private AudioSource effectAudioSource;
     private AudioSource BGAudioSource;
@@ -27,7 +28,10 @@ public class SoundManager : MonoBehaviour
         effectAudioSource = GetComponent<AudioSource>();
         BGAudioSource = GameObject.FindGameObjectWithTag("BackGroundSound").GetComponent<AudioSource>();
 
-        BGAudioSource.volume = PlayerPrefs.GetFloat("bgVolume", 0.5f);
+        Scene activeScreen = SceneManager.GetActiveScene();
+        if (activeScreen.buildIndex == 1) BGAudioSource.volume = PlayerPrefs.GetFloat("bgVolume", 0.5f);
+        else BGAudioSource.volume = PlayerPrefs.GetFloat("bgVolume", 0.5f)/5;
+
         effectVolume = PlayerPrefs.GetFloat("effectVolume", 0.5f);
     }
 
@@ -95,5 +99,10 @@ public class SoundManager : MonoBehaviour
     public void PlayKnockDoorSound()
     {
         PlaySound(knockDoorSound, 0.7f);
+    }
+
+    public void PlayVictorySound()
+    {
+        PlaySound(victorySound, 1f);
     }
 }

@@ -60,6 +60,7 @@
      <Compile Include="Assets\Script\GameManagers\SoundManager.cs" />
      <Compile Include="Assets\Script\GameObjects\Coin.cs" />
      <Compile Include="Assets\Script\GameObjects\Door.cs" />
+     <Compile Include="Assets\Script\GameObjects\Door2.cs" />
      <Compile Include="Assets\Script\GameObjects\FallingPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\MoveUpPlat.cs" />
      <Compile Include="Assets\Script\GameObjects\MovingFRPlat.cs" />
