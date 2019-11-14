@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound, shoeOutSound;
+    public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound, shoeOutSound, knockDoorSound;
  
     private AudioSource effectAudioSource;
     private AudioSource BGAudioSource;
@@ -90,5 +90,10 @@ public class SoundManager : MonoBehaviour
     public void PlayShoeOutSound()
     {
         PlaySound(shoeOutSound, 0.7f);
+    }
+
+    public void PlayKnockDoorSound()
+    {
+        PlaySound(knockDoorSound, 0.7f);
     }
 }

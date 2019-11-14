@@ -1856,6 +1856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoad: 2
   gameMaster: {fileID: 0}
+  soundManager: {fileID: 0}
   anim: {fileID: 0}
   isOpened: 0
 --- !u!95 &724569130
@@ -2147,6 +2148,7 @@ MonoBehaviour:
   fullHeartSound: {fileID: 8300000, guid: 3fde74a5202dc734d816caf8f48315dd, type: 3}
   shoeSound: {fileID: 8300000, guid: 39a62a5e07ba1424b8f328a721f6b601, type: 3}
   shoeOutSound: {fileID: 8300000, guid: ca7cc6436fa8ac34e9a5bd109690403e, type: 3}
+  knockDoorSound: {fileID: 8300000, guid: 2b1c0f529eb87ab4b950a7f5e8317013, type: 3}
 --- !u!82 &824817241
 AudioSource:
   m_ObjectHideFlags: 0

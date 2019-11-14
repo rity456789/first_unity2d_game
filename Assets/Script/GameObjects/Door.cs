@@ -7,11 +7,13 @@ public class Door : MonoBehaviour
 {
     public int levelLoad = 2;
     public GameMaster gameMaster;
+    public SoundManager soundManager;
     public Animator anim;
     public bool isOpened = false;
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         anim = gameObject.GetComponent<Animator>();
     }
@@ -27,6 +29,7 @@ public class Door : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             SaveScore();
+            soundManager.PlayKnockDoorSound();
             isOpened = true;
             gameMaster.newSceneText.text = ("Press E to enter");
         }
