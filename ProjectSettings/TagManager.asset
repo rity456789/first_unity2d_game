@@ -15,6 +15,7 @@ TagManager:
   - MovingFRPlat
   - FullHeart
   - AttackTrigger
+  - BackGroundSound
   layers:
   - Default
   - TransparentFX

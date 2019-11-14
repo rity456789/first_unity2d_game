@@ -6,20 +6,29 @@ public class SoundManager : MonoBehaviour
 {
     public AudioClip coinSound, swordSound, crashSound, jumpSound, hurtSound, heartSound, fullHeartSound, shoeSound, shoeOutSound;
  
-    public AudioSource audioSource;
+    private AudioSource effectAudioSource;
+    private AudioSource BGAudioSource;
+
+    private float effectVolume;
     // Start is called before the first frame update
     void Start()
     {
-        coinSound = Resources.Load<AudioClip>("Coin");
-        swordSound = Resources.Load<AudioClip>("Sword");
-        crashSound = Resources.Load<AudioClip>("Crash");
-        jumpSound = Resources.Load<AudioClip>("Jump");
-        hurtSound = Resources.Load<AudioClip>("Hurt");
-        heartSound = Resources.Load<AudioClip>("Heart");
-        fullHeartSound = Resources.Load<AudioClip>("FullHeart");
-        shoeSound = Resources.Load<AudioClip>("Shoe");
-        shoeOutSound = Resources.Load<AudioClip>("ShoeOut");
-        audioSource = GetComponent<AudioSource>();
+        // coinSound = Resources.Load<AudioClip>("Coin");
+        // swordSound = Resources.Load<AudioClip>("Sword");
+        // crashSound = Resources.Load<AudioClip>("Crash");
+        // jumpSound = Resources.Load<AudioClip>("Jump");
+        // hurtSound = Resources.Load<AudioClip>("Hurt");
+        // heartSound = Resources.Load<AudioClip>("Heart");
+        // fullHeartSound = Resources.Load<AudioClip>("FullHeart");
+        // shoeSound = Resources.Load<AudioClip>("Shoe");
+        // shoeOutSound = Resources.Load<AudioClip>("ShoeOut");
+
+
+        effectAudioSource = GetComponent<AudioSource>();
+        BGAudioSource = GameObject.FindGameObjectWithTag("BackGroundSound").GetComponent<AudioSource>();
+
+        BGAudioSource.volume = PlayerPrefs.GetFloat("bgVolume", 0.5f);
+        effectVolume = PlayerPrefs.GetFloat("effectVolume", 0.5f);
     }
 
     // Update is called once per frame
@@ -31,8 +40,9 @@ public class SoundManager : MonoBehaviour
     // basic function
     public void PlaySound(AudioClip sound, float volumn)
     {
-        audioSource.clip = sound;
-        audioSource.PlayOneShot(sound, volumn);
+        float playVolumn = volumn * effectVolume * 0.7f;
+        effectAudioSource.clip = sound;
+        effectAudioSource.PlayOneShot(sound, playVolumn);
     }
 
     // -------------------------------------------------------------------------------
@@ -43,7 +53,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySwordSound()
     {
-        PlaySound(swordSound, 0.7f);
+        PlaySound(swordSound, 0.5f);
     }
 
     public void PlayCrashSound()

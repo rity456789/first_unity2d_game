@@ -7,16 +7,19 @@ public class Door : MonoBehaviour
 {
     public int levelLoad = 2;
     public GameMaster gameMaster;
+    public Animator anim;
+    public bool isOpened = false;
     // Start is called before the first frame update
     void Start()
     {
         gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        anim.SetBool("isOpened", isOpened);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -24,6 +27,7 @@ public class Door : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             SaveScore();
+            isOpened = true;
             gameMaster.newSceneText.text = ("Press E to enter");
         }
     }
@@ -44,6 +48,7 @@ public class Door : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            isOpened = false;
             gameMaster.newSceneText.text = ("");
         }
     }
